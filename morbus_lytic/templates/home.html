@@ -1,0 +1,43 @@
+<li><a id="signupBtn" href="#"><i class="fa-solid fa-right-to-bracket"></i> signup</a></li>
+                <div id="signupModal" class="signupModalClass">
+
+                    <!-- Modal content -->
+                    <div class="signup-modal-content">
+                        <span id="signup-close" class="close">&times;</span>
+                        <form id="signupForm">
+                            <label for="username">Username:</label><br>
+                            <input type="text" id="username" name="username"><br>
+                            <label for="password">Password:</label><br>
+                            <input type="password" id="password" name="password"><br>
+                            <input type="submit" value="Log in">
+                        </form>
+                    </div>
+
+                </div>
+
+
+                // Get the modal
+    var signup_modal = document.getElementById('signupModal');
+
+    // Get the button that opens the signup_modal
+    var signup_btn = document.getElementById('signupBtn');
+
+    // Get the <span> element that closes the modal
+    var signup_span = document.getElementById('signup-close');
+
+    // When the user clicks on the button, open the modal 
+    signup_btn.onclick = function () {
+        signup_modal.style.display = 'block';
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    signup_span.onclick = function () {
+        signup_modal.style.display = 'none';
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == signup_modal) {
+            signup_modal.style.display = 'none';
+        }
+    }
