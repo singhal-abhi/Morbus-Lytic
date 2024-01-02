@@ -17,7 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
-from .views import index, simulation
+from .views import index, simulation,login,logout,signup
 # from allauth.account.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -25,6 +25,9 @@ urlpatterns = [
     # path('accounts/',include('allauth.urls')),
     # path('accounts/',include('allauth.socialaccount.urls')),
     path('',index),
-    path('simulation/',simulation)
+    path('simulation/',simulation),
+    path('user/login/',login),
+    path('user/signup/',signup),
+    path('user/logout/',logout),
 
 ]
